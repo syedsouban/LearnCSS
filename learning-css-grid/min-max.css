@@ -1,0 +1,11 @@
+/* auto-fit behavior: “make whatever columns you have fit into the available space. Expand them as much as you need to fit the row size.
+ Empty columns must not occupy any space. Put that space to better use by expanding the filled (as in: filled with content/grid items)
+  columns to fit the available row space.” from css-tricks.com */
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    /* grid-template-rows: repeat(2, 100px); */
+}
